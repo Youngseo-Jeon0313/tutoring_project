@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+						/* 하위 선택자 */
+            #item-list p {
+                color: blue;
+            }
+						
+						/* 자식 선택자 */
+            #item-list > p {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="item-list">
+            <p>자식 아이템1</p>
+            <p>자식 아이템2</p>
+            <div>
+                <p>하위 아이템1</p>
+                <p>하위 아이템2</p>
+            </div>
+        </div>
+    </body>
+</html>
