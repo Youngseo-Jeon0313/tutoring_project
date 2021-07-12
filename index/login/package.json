@@ -1,0 +1,25 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youngseo-Jeon0313/tutoring_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Youngseo-Jeon0313/tutoring_project/issues"
+  },
+  "homepage": "https://github.com/Youngseo-Jeon0313/tutoring_project#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

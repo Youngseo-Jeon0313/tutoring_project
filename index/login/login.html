@@ -1,0 +1,22 @@
+
+<head>
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        axios.get('https://563b6495-f5a0-4c1e-84ac-07ee115581d2.mock.pstmn.io/profile').then(function(result){
+            console.log('통신 결과: ', result)
+        }).catch(function(error){
+            console.log('error 발생')
+        });
+    </script>
+    <div>
+        <input type="email" placeholder="email을 입력해주세용" id="email" value="" >
+    </div>
+    <div>
+        <input type="password" placeholder="비밀번호를 입력해주세용" id="pw" value="">
+    </div>
+    
+    <input type="button" onclick='onLoggin()' value="로그인">
+</body>
