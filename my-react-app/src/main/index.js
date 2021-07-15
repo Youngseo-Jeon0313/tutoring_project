@@ -1,5 +1,5 @@
 function MainPage() {
-    return <p>메인 페이지</p>;
+    return <p></p>;
 }
 
 export default MainPage;
