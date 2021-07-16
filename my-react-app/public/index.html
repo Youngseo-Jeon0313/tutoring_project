@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
+
   <head>
-
+    <title>과외 project</title>    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <head>
-      <title>과외 project</title>
-      <link href="/src/index.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="과외.css" rel="stylesheet">
+    <script type "text/javascript" src="과외.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body>
+<header>
+    <p align="center">
+    <img src="https://imagescdn.gettyimagesbank.com/171/201607/a10514990.jpg" alt="우산이미지" width="60" height="60">
+    <span class="제목이요">_ _아 같이 공부하자!!</span> <!--이후에 이름은 삽입할 예정-->
+    </p>
+</header>
+<main>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+    <span class ="본문">
+        <div class="제목">그날그날 숙제 체크!</div>
+        <br>
+        <input id='달력' type='date' name='달력'/>
+        <br>
+        <textarea cols="50" rows="10"></textarea> <!--확인하는 창으로 이용-->
+
+    </span>
+    <span class="본문">
+        <div class="제목">D-Day★</div>
+        <br>
+        9월 모의고사 : 
+        <div class='js-clock'></div>
+        <!--이 옆에 자동으로 날짜 계산해서 D-day알려줌-->
+        <br>
+        수능 :
+    </span>
+    <span class ="본문">
+        <div class="제목">그날그날 수업 내용!</div>
+        <br>
+        <input id='달력' type='date' name='달력'/>
+        <br>
+        <textarea cols="50" rows="10"></textarea>
+        
+    </span> 
+</main>
+<main>
+    <span class ="본문">
+        <div class="제목">질문/피드백 공간</div></main>
+
+            <div id="root"></div>
+    </body>
+<footer>
+  <div id="maker">
+    <p>전영서 만듦!</p>
+    <p>오류나 보수 등은 20wjsdudtj@gmail.com으로 문의해주세요.</p>
+</div>
+</footer>
