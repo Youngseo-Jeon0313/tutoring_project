@@ -20,14 +20,10 @@ class Container extends React.Component{
     }
 
     render() {
-        const {days, hours, minutes, seconds, progress } = this.state;
+        const {days, hours, minutes, seconds} = this.state;
         return (
             <h1>
-            days={days}
-            hours={hours}
-            minutes={minutes}
-            seconds={seconds}
-            progress={progress}
+                수능까지 남은 시간:{days}일 {hours}시간 {minutes}분 {seconds}초
             </h1>
         );
     }
