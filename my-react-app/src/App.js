@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './App.css';
 import Container from './dday';
+import 'antd/dist/antd.css';
+import { Input } from 'antd';
 
 //link 태그!
 
@@ -19,6 +22,8 @@ class App extends Component {
             <p align="center">
             <img src="https://imagescdn.gettyimagesbank.com/171/201607/a10514990.jpg" alt="우산이미지" width="60" height="60"></img>
             <span class="제목이요">_ _아 같이 공부하자!!</span>
+              <Input placeholder="Basic usage" />
+            
             </p>
           </header>
           <main>
@@ -52,7 +57,14 @@ class App extends Component {
 
 
 </span>
+
 </main>
+
+<div>
+  <Link to="./pages/html1.js">
+    <button>버튼을 누르면 page가 넘어가요</button>
+      </Link>
+</div>
       </body>
         <footer>
         <div id="maker">
