@@ -6,6 +6,7 @@ import Container from './dday';
 import 'antd/dist/antd.css';
 import { Input, Button } from 'antd';
 import {DatePicker} from 'antd';
+import Container1 from './dday9평';
 
 //link 태그!
 
@@ -52,7 +53,7 @@ class App extends Component {
 <span class="본문">
     <div class="제목">D-Day★</div>
     <br></br>
-    9월 모의고사 : 
+    9월 모의고사 : <Container1/>
     <div className='js-clock'></div>
     <br></br>
 <Container/>
