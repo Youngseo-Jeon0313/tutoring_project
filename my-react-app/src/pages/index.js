@@ -1,5 +1,8 @@
-import React, {Component} from 'react';
-class pages extends Component {
+import React from 'react';
+
+
+
+class Student extends React.Component {
     render() {
       return (
        <div>
@@ -11,4 +14,4 @@ class pages extends Component {
     }
   }
 
-export default pages;
+export default Student;
