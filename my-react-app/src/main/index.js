@@ -4,7 +4,10 @@ import { Input} from 'antd';
 import {DatePicker} from 'antd';
 import Container1 from '../dday9평';
 
+
 function MainPage() {
+
+
     return (
 
 <div>
@@ -38,3 +41,13 @@ function MainPage() {
 }
 
 export default MainPage;
+
+
+
+
+
+
+
+
+
+
