@@ -1,10 +1,9 @@
 import React from 'react';
 import {Link, Switch, Route, useHistory} from 'react-router-dom';
-import StudentPage from './student'
+import StudentPage from './student';
 import './App.css';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
-
 import MainPage from './main';
 
 //link 태그!

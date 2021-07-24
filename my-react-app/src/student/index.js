@@ -12,7 +12,7 @@ function StudentPage() {
          <Form name="사진 업로드" onFinish={onSubmit}>
           <Form.Item name="upload">
             <div id="upload-img-placeholder">
-              <span>이미지를 업로드해주세요</span>
+              <span>하고 싶은 작업을 밑에서 선택하세요</span>
             </div>
           </Form.Item>
          </Form>
