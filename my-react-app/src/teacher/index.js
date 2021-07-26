@@ -2,7 +2,7 @@ import React from 'react';
 import {Form} from 'antd';
 
 
-function teacherPage() {
+function TeacherPage() {
       const onSubmit = (values) => {
         console.log(values);
       }
@@ -23,4 +23,4 @@ function teacherPage() {
   
   }
 
-export default teacherPage;
+export default TeacherPage;

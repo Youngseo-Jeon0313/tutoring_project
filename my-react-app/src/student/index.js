@@ -3,6 +3,7 @@ import {Form} from 'antd';
 
 
 function StudentPage() {
+
       const onSubmit = (values) => {
         console.log(values);
       }

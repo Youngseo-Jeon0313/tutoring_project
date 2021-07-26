@@ -5,7 +5,8 @@ import Container1 from '../dday9평';
 import axios from "axios";
 import {useEffect, useState} from "react";
 import "./index.css";
-import {Link} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
+import QuestionPage from '../question';
 
 function MainPage() {
     const [content, setContent] = useState([]);
@@ -45,13 +46,22 @@ function MainPage() {
                         {content.map(function(content, index){    
                              return(  
                                 <div>
-                                    <Link className="content-link" to={`/student/${content.id}`}>
+                                    <Link className="content-link" to={`/question/${content.id}`}>
                                         <div className="question-contents">
-                                        <span className="question-pageandnum">{content.pageandnum}</span>
-                                        <span className="question-date">{content.date}</span>
-                                        <div className="question-description">{content.description}</div>
+                                        <span className="question-img">
+                                            <img src={"/"+content.imageUrl} alt="질문 사진"></img>
+                                        </span>
+                                        <br></br>
+                                        <span className="question-pageandnum">책&번호 :{content.pageandnum}</span>
+                                        <br></br>
+                                        <span className="question-date">질문 날짜:{content.date}</span>                                        
                                         </div>
                                     </Link>
+                                    <Switch>
+                                    <Route exact={true} path="/">
+                                        <QuestionPage/>
+                                    </Route>
+                                    </Switch>
                                 </div>
                                 )  
                             })}  

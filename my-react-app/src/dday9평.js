@@ -23,7 +23,7 @@ class Container1 extends React.Component{
         const {days, hours, minutes, seconds} = this.state;
         return (
             <h1>
-                수능까지 남은 시간:{days}일 {hours}시간 {minutes}분 {seconds}초
+                9평까지 남은 시간:{days}일 {hours}시간 {minutes}분 {seconds}초
             </h1>
         );
     }

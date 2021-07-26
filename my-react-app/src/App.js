@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, Switch, Route, useHistory} from 'react-router-dom';
 import StudentPage from './student';
+import TeacherPage from './teacher';
 import './App.css';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
@@ -32,7 +33,11 @@ const history = useHistory();
             }}>
               과외학생업로드창</Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button >과외선생업로드창</Button>
+            <Button 
+            onClick = {function(){
+              history.push('/src/teacher');
+            }}>
+              과외선생업로드창</Button>
             </p>
           <Switch>
             <Route exact={true} path="/">
@@ -41,8 +46,8 @@ const history = useHistory();
             <Route exact={true} path="/src/student">
               <StudentPage />
             </Route>
-            <Route exact={true} path="/teacher">
-              <teacherPage />
+            <Route exact={true} path="/src/teacher">
+              <TeacherPage/>
            </Route>
           </Switch>
        </header>
