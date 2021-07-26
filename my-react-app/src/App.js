@@ -6,10 +6,8 @@ import './App.css';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import MainPage from './main';
-
+import QuestionPage from './question';
 //link 태그!
-
-
 
 
 function App() {    
@@ -31,13 +29,13 @@ const history = useHistory();
             onClick = {function(){
                 history.push('/src/student');
             }}>
-              과외학생업로드창</Button>
+              과외학생공간★</Button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button 
             onClick = {function(){
               history.push('/src/teacher');
             }}>
-              과외선생업로드창</Button>
+              과외선생공간★</Button>
             </p>
           <Switch>
             <Route exact={true} path="/">
@@ -48,6 +46,9 @@ const history = useHistory();
             </Route>
             <Route exact={true} path="/src/teacher">
               <TeacherPage/>
+           </Route>
+           <Route exact={true} path="/question/:id">
+             <QuestionPage/>
            </Route>
           </Switch>
        </header>
