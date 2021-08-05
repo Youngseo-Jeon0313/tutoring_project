@@ -50,10 +50,10 @@ function StudentPage() {
                   onChange={onChangeImage}
                   >
                     {imageUrl ? (
-                      <img id="upload-img" src={`${API_URL}/${imageUrl}`} alt="profile" />
+                      <img id="upload-img" src={`${API_URL}/${imageUrl}`} alt="" />
                     ):(
                       <div id="upload-img-placeholder">
-                        <img src="../images/camera.png" alt="profile"/>
+                        <img src="/" alt=""/>
                         <span>질문 사진을 업로드해주세요.</span>
                       </div>
                     )}
