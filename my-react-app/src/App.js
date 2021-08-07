@@ -8,6 +8,8 @@ import { Button } from 'antd';
 import MainPage from './main';
 import QuestionPage from './question';
 import Uploadpage from './upload';
+import StudyDiaryPage from './studydiary';
+
 //link 태그!
 
 
@@ -54,6 +56,9 @@ const history = useHistory();
            <Route exact={true} path="/upload">
              <Uploadpage/>
            </Route>
+           <Route exact={true} path="/studydiary">
+              <StudyDiaryPage/>
+            </Route>
           </Switch>
        </header>
     </body>

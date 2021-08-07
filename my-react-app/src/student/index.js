@@ -1,6 +1,7 @@
 import {React} from 'react';
 import "./index.css";
 import UploadPage from "../upload";
+import StudyDiaryPage from "../studydiary";
 import {Switch, Route, Link} from "react-router-dom";
 
 function StudentPage() {
@@ -14,12 +15,15 @@ function StudentPage() {
               <span>하고 싶은 작업을 밑에서 선택하세요</span>
             </div>
             <li><Link to="../upload">질문 올리기</Link></li>
-            <li><a href=".">그날그날 공부일기</a></li>
-            <li><a href=".">오늘의 글귀 적어보기</a></li>
+            <li><Link to="../studydiary">그날그날 공부일기</Link></li>
+          
           
             <Switch>
             <Route exact={true} path="../upload">
               <UploadPage />
+            </Route>
+            <Route exact={true} path="../studydiary">
+              <StudyDiaryPage/>
             </Route>
             </Switch>
           </body>
