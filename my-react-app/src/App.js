@@ -7,6 +7,7 @@ import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import MainPage from './main';
 import QuestionPage from './question';
+import Uploadpage from './upload';
 //link 태그!
 
 
@@ -49,6 +50,9 @@ const history = useHistory();
            </Route>
            <Route exact={true} path="/question/:id">
              <QuestionPage/>
+           </Route>
+           <Route exact={true} path="/upload">
+             <Uploadpage/>
            </Route>
           </Switch>
        </header>
