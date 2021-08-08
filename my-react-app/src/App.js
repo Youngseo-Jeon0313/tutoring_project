@@ -9,7 +9,8 @@ import MainPage from './main';
 import QuestionPage from './question';
 import Uploadpage from './upload';
 import StudyDiaryPage from './studydiary';
-
+import SchedulePage from './schedule;';
+import AnswerPage from './answer';
 //link 태그!
 
 
@@ -59,6 +60,12 @@ const history = useHistory();
            <Route exact={true} path="/studydiary">
               <StudyDiaryPage/>
             </Route>
+            <Route exact={true} path="../answer">
+              <AnswerPage />
+            </Route>
+            <Route exact={true} path="../schedule">
+              <SchedulePage/>
+              </Route> 
           </Switch>
        </header>
     </body>
