@@ -2,6 +2,7 @@ import {Form, Upload, Divider, Input, Button} from 'antd';
 import axios from "axios";
 import { API_URL } from "../config/constants";
 import {React, useState} from "react";
+import "./index.css";
 
 function UploadPage(){
     const [imageUrl, setImageUrl] = useState(null);
@@ -30,13 +31,12 @@ function UploadPage(){
 return(
     <div>
          <body>
-           <div> 
+           <div id = "upload-container"> 
              <Form name='질문 업로드' onFinish={onSubmit}>
               <Form.Item 
-                name="upload"
-                label={<div className="upload-label">질문 사진</div>}>
+                name="upload">
                 <Upload
-                  name="image"
+                  name="image" 
                   action={`${API_URL}/image`}
                   listType="picture"
                   showUploadList={false}
@@ -45,8 +45,8 @@ return(
                     {imageUrl ? (
                       <img id="upload-img" src={`${API_URL}/${imageUrl}`} alt="" />
                     ):(
-                      <div id="upload-img-placeholder">
-                        <img src="/" alt=""/>
+                      <div id="upload-img-placeholder" >
+                        <img src="img/upload.png" alt="ㅠㅠ사진이안보여요"/>
                         <span>질문 사진을 업로드해주세요.</span>
                       </div>
                     )}
@@ -86,7 +86,7 @@ return(
                 </Form.Item>
               </Form.Item>
               <Button id="submit-button" size="large" htmlType="submit">
-                문제 등록하기!
+                질문 등록하기!
               </Button>
              </Form>
              </div>

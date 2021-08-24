@@ -1,14 +1,14 @@
 import { React } from "react";
-import "./index.css";
+
 
 function StudyDiaryPage() {
 
     return(
-    <div>
-    <body>
-        <p>달력을 이용한 Diary쓰기 구상</p>
-    </body>
-    </div>
+<div>
+  <body>
+    <h1>TOAST UI Calendar</h1>
+  </body>
+</div>
 
     );
 }

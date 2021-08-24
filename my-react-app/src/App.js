@@ -9,7 +9,7 @@ import MainPage from './main';
 import QuestionPage from './question';
 import Uploadpage from './upload';
 import StudyDiaryPage from './studydiary';
-import SchedulePage from './schedule;';
+import SchedulePage from './schedule';
 import AnswerPage from './answer';
 //link 태그!
 
