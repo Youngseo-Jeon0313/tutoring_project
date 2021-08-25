@@ -11,8 +11,8 @@ function TeacherPage() {
       }
       return (
        <div>
-         <Form name="사진 업로드" onFinish={onSubmit}>
-          <Form.Item name="upload">
+         <Form className="사진 업로드" onFinish={onSubmit}>
+          <Form.Item className="upload">
             <div id="upload-img-placeholder">
               <span>하위페이지 구성</span>
             </div>

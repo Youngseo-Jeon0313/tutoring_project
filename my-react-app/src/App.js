@@ -11,6 +11,7 @@ import Uploadpage from './upload';
 import StudyDiaryPage from './studydiary';
 import SchedulePage from './schedule';
 import AnswerPage from './answer';
+import "./index.css";
 //link 태그!
 
 
@@ -18,15 +19,11 @@ function App() {
 const history = useHistory();
   return (
     <div>
-      <head>
-        <title>과외project</title>
-      </head>
-      <body>
-        <header>
+     <title>과외project</title>  
           <p align="center">
             <Link to ="/">
             <img src="https://imagescdn.gettyimagesbank.com/171/201607/a10514990.jpg" alt="우산이미지" width="60" height="60"></img>
-            <span class="제목이요">과외 일지</span>
+            <span className="제목이요">과외 일지</span>
             </Link></p>
             <p align = "center">
             <Button 
@@ -41,6 +38,7 @@ const history = useHistory();
             }}>
               과외선생공간★</Button>
             </p>
+            
           <Switch>
             <Route exact={true} path="/">
               <MainPage />
@@ -67,17 +65,12 @@ const history = useHistory();
               <SchedulePage/>
               </Route> 
           </Switch>
-       </header>
-    </body>
-
-    <footer>
-        <div id="maker">
+        <div id="footer">
+          <footer>
             <p>전영서 만듦!</p>
             <p>오류나 보수 등은 20wjsdudtj@gmail.com으로 문의해주세요.</p>
+        </footer>
         </div>
-    </footer>
-
-      <div className="App"></div>
       </div>
     );
 }

@@ -24,11 +24,11 @@ function MainPage() {
         <body>
             <main>
                 <span className="본문">
-                    <div class="제목">그날그날 숙제 체크!</div>
+                    <div className="제목">그날그날 숙제 체크!</div>
                     <br></br><DatePicker/><br></br>
                 </span>
-                <span class="본문">
-                <div class="제목">D-Day★</div><br></br>9월 모의고사 : <Container1/>
+                <span className="본문">
+                <div className="제목">D-Day★</div><br></br>9월 모의고사 : <Container1/>
                 <div className='js-clock'></div><br></br><Container/>
                 </span>
                 <span className ="본문">
@@ -37,8 +37,8 @@ function MainPage() {
             </main>
 
             <main>
-                <span class ="본문">
-                    <div class="제목">질문/피드백 공간</div>
+                <span className ="본문">
+                    <div className="제목">질문/피드백 공간</div>
                     <div id='question-list'>
                         {contents.map(function(content, index){  
                              return( 

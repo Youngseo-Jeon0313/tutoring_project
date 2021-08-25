@@ -1,5 +1,6 @@
 .upload-container {
     padding-top : 25px;
+    padding-left: 20px;
 }
 
 #upload-img-placeholder {
@@ -12,6 +13,11 @@
     border: 1px solid rgb(230,230,230);
     background: rgb(250,250,253);
     margin-left: 16px;
+}
+
+#upload-img {
+    width: 300px;
+    height: 300px;
 }
 
 #upload-img-placeholder > img {

@@ -29,14 +29,12 @@ function UploadPage(){
       }
     };
 return(
-    <div>
-         <body>
            <div id = "upload-container"> 
              <Form name='질문 업로드' onFinish={onSubmit}>
               <Form.Item 
-                name="upload">
+                className="upload">
                 <Upload
-                  name="image" 
+                  className="image" 
                   action={`${API_URL}/image`}
                   listType="picture"
                   showUploadList={false}
@@ -54,7 +52,7 @@ return(
                 <Divider />
                 <Form.Item
                   label={<div className="upload-label">질문하는 날짜</div>}
-                  name="date"
+                  className="date"
                   rules={[{required: true, message: "질문 날짜를 8글자로 입력해주세요"}]}>
                       <Input
                         className="upload-pageandnum"
@@ -64,7 +62,7 @@ return(
                 <Divider/>
                 <Form.Item
                   label={<div className="upload-label">질문하는 문제</div>}
-                  name="pageandnum"
+                  className="pageandnum"
                   rules={[{required: true, message: "질문 책/페이지/문제번호를 입력해주세요"}]}>
                       <Input
                         className="upload-pageandnum"
@@ -73,7 +71,7 @@ return(
                 </Form.Item>
                 <Divider/>
                 <Form.Item
-                  name="description"
+                  className="description"
                   label={<div className="upload-label">질문할 내용</div>}
                   rules={[{required: true, message:"질문 내용을 적어주세요."}]}>
                   <Input.TextArea
@@ -90,10 +88,6 @@ return(
               </Button>
              </Form>
              </div>
-
-             </body>
-          </div>
-
        ) };
 
 export default UploadPage;

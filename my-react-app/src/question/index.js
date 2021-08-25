@@ -24,7 +24,6 @@ function QuestionPage() {
 
     return (
     <div>
-        <body>
         <div id="image-box">
         <img src={"/"+content.imageUrl} alt="질문 사진"/>
        </div>
@@ -33,7 +32,6 @@ function QuestionPage() {
             <div className="date">질문 날짜 : {content.date}</div>
             <div className="description">질문 내용 : {content.description}</div>
         </div>
-        </body>
     </div>
 
     );
