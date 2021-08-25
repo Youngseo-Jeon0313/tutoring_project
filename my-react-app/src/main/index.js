@@ -21,7 +21,6 @@ function MainPage() {
 
     return (
     <div>
-        <body>
             <main>
                 <span className="본문">
                     <div className="제목">그날그날 숙제 체크!</div>
@@ -60,7 +59,6 @@ function MainPage() {
                     </div>    
                 </span>
             </main>
-        </body>
     </div>
 
     );

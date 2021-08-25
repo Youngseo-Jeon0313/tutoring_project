@@ -11,7 +11,6 @@ import Uploadpage from './upload';
 import StudyDiaryPage from './studydiary';
 import SchedulePage from './schedule';
 import AnswerPage from './answer';
-import "./index.css";
 //link 태그!
 
 
@@ -65,7 +64,7 @@ const history = useHistory();
               <SchedulePage/>
               </Route> 
           </Switch>
-        <div id="footer">
+        <div className="footer">
           <footer>
             <p>전영서 만듦!</p>
             <p>오류나 보수 등은 20wjsdudtj@gmail.com으로 문의해주세요.</p>

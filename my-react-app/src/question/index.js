@@ -8,6 +8,7 @@ import "./index.css";
 function QuestionPage() {
     const {id} = useParams();
     const [content, setContent] = useState(null);
+
     useEffect(function() {
         axios.get(`http://localhost:8080/question/${id}`)
         .then(function(result){

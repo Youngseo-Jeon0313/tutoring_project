@@ -10,7 +10,6 @@ function StudentPage() {
   
       return (
         <div>
-           <body>
             <div>
               <span>하고 싶은 작업을 밑에서 선택하세요</span>
             </div>
@@ -26,7 +25,6 @@ function StudentPage() {
               <StudyDiaryPage/>
             </Route>
             </Switch>
-          </body>
         </div>
       );
         
