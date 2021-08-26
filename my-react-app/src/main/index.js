@@ -5,8 +5,10 @@ import Container1 from '../dday9평';
 import axios from "axios";
 import {useEffect, useState} from "react";
 import "./index.css";
-import {Link} from "react-router-dom";
+import {Link, Switch, Route} from "react-router-dom";
 import { API_URL } from "../config/constants";
+import Classpage from '../daybyday/class';
+import Homeworkpage from '../daybyday/homework';
 
 function MainPage() {
     const [contents, setContent] = useState([]);
@@ -25,7 +27,7 @@ function MainPage() {
             <main>
                 <span className="본문">
                     <div className="제목">그날그날 숙제 체크!</div>
-                    <br></br><DatePicker/><br></br>
+                    <br></br><Classpage/><br></br>
                 </span>
                 <span className="본문">
                 <div className="제목">D-Day★</div><br></br>9월 모의고사 : <Container1/>
@@ -34,6 +36,14 @@ function MainPage() {
                 <span className ="본문">
                     <div className="제목">그날그날 수업 내용!</div><br></br><DatePicker/><br></br>
                     </span> 
+            <Switch>
+            <Route exact={true} path="../daybyday/class">
+              <Classpage />
+            </Route>
+            <Route exact={true} path="../daybyday/homework">
+                <Homeworkpage/>
+            </Route>
+            </Switch>
             </main>
 
             <main>
@@ -54,6 +64,7 @@ function MainPage() {
                                         <span className="question-date">질문 날짜:{content.date}</span>                                        
                                         </div>
                                     </Link>
+
                                 </div>
                                 )  
                             })}  
