@@ -14,3 +14,8 @@
 .description{
     font-size:30px;
 }
+
+#image-box > img{
+    width: 400px;
+    height: 400px;
+}

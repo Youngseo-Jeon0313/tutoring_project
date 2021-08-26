@@ -10,7 +10,7 @@ function UploadPage(){
     const history = useHistory();
 
     const onSubmit = (values) => {
-      axios.post(`${API_URL}/contents`,{
+      axios.post(`${API_URL}/question`,{
         imageUrl: imageUrl,
         description: values.description,
         pageandnum: values.pageandnum,
@@ -85,7 +85,7 @@ function UploadPage(){
                   rules={[{required: true, message:"질문 내용을 적어주세요."}]}>
                   <Input.TextArea
                     size="large"
-                    id="description"
+                    className="description"
                     showCount
                     maxLength={300}
                     placeholder="질문하고자 하는 내용을 적어주세요."

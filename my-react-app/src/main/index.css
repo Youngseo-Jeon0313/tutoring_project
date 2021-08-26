@@ -35,3 +35,8 @@ footer{
 .제목{
     font-size:32px;
 }
+
+.question-img > img {
+    height: 100px;
+    width: 100px;
+}

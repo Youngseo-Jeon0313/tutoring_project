@@ -6,6 +6,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import "./index.css";
 import {Link} from "react-router-dom";
+import { API_URL } from "../config/constants";
 
 function MainPage() {
     const [contents, setContent] = useState([]);
@@ -45,7 +46,7 @@ function MainPage() {
                                     <Link style={{color: "inherit"}} className="content-link" to={`/question/${content.id}`}>
                                         <div className="question-contents">
                                         <span className="question-img">
-                                            <img src={"/"+content.imageUrl} alt="질문 사진"></img>
+                                            <img src={`${API_URL}/${content.imageUrl}`} alt="질문사진"></img>
                                         </span>
                                         <br></br>
                                         <span className="question-pageandnum">책&번호 :{content.pageandnum}</span>

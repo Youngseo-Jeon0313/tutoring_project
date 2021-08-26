@@ -3,6 +3,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import { useParams } from 'react-router';
 import "./index.css";
+import { API_URL } from "../config/constants";
 
 
 function QuestionPage() {
@@ -26,7 +27,7 @@ function QuestionPage() {
     return (
     <div>
         <div id="image-box">
-        <img src={"/"+content.imageUrl} alt="질문 사진"/>
+        <img src={`${API_URL}/${content.imageUrl}`} alt="질문사진"/>
        </div>
         <div id="question-box">
             <div className="pageandnum">해당 문제 : {content.pageandnum}입니당</div>
