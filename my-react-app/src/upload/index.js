@@ -6,7 +6,7 @@ import "./index.css";
 import {useHistory} from "react-router-dom";
 
 function UploadPage(){
-    const [imageUrl, setImageUrl] = useState(null);
+    const [imageUrl, setImageUrl] = useState(null); 
     const history = useHistory();
 
     const onSubmit = (values) => {
