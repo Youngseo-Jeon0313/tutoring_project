@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 import "./index.css";
 import {Link, Switch, Route} from "react-router-dom";
 import { API_URL } from "../config/constants";
-import Classpage from '../daybyday/class';
+import Classpage from '../daybyday/class/index';
 import Homeworkpage from '../daybyday/homework';
 
 function MainPage() {
@@ -37,7 +37,7 @@ function MainPage() {
                     <div className="제목">그날그날 수업 내용!</div><br></br><DatePicker/><br></br>
                     </span> 
             <Switch>
-            <Route exact={true} path="../daybyday/class">
+            <Route exact={true} path="../daybyday/class/index">
               <Classpage />
             </Route>
             <Route exact={true} path="../daybyday/homework">
