@@ -7,7 +7,6 @@ const List = ({todos, loading, changeTodoStatus}) => {
     if (!loading) todoList = todos.map( (todo) => 
     <Item key={todo.id} todo={todo} changeTodoStatus={changeTodoStatus}/>)
 
-
     return (
         <ul>
             {todoList}

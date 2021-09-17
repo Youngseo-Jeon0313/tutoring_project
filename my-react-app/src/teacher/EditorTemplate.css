@@ -1,0 +1,6 @@
+.template{
+    height:calc(100vh - 20rem);
+    display: flex;
+    background: gray;
+
+}

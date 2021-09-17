@@ -25,7 +25,7 @@ function QuestionPage() {
     }
 
     return (
-    <div>
+    <div className="posting">
         <div id="image-box">
         <img src={`${API_URL}/${content.imageUrl}`} alt="질문사진"/>
        </div>

@@ -71,19 +71,12 @@ function MainPage() {
                     </div>    
                 </span>
             </main>
+            <div>
+
+            </div>
     </div>
 
     );
 }
 
 export default MainPage;
-
-
-
-
-
-
-
-
-
-
