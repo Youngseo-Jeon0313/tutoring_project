@@ -1,6 +1,25 @@
-.template{
-    height:calc(100vh - 20rem);
-    display: flex;
-    background: gray;
+.template {
+  height: calc(100vh - 20rem);
+  display: flex;
+  background: gray;
+}
+
+.homework {
+  display: flex;
+  flex: 1;
+}
+
+.board {
+  display: flex;
+  flex: 1;
+}
+
+.separator {
+  width: 1rem;
+  height: calc(100vh - 20rem);
+  background:black;
+  position: absolute;
+  transform: translate(-50%);
+  cursor: col-resize;
 
 }
