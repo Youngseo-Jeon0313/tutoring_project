@@ -6,7 +6,9 @@ function TeacherPage() {
 
       return (
        <div>
-         <EditorTemplate homework="숙제" board="칠판" ></EditorTemplate>
+         <EditorTemplate homework="숙제를 업로드하시오." >
+
+         </EditorTemplate>
         </div>
       );
   

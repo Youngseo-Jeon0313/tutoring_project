@@ -1,7 +1,14 @@
-import {React, Component} from 'react'
+import {React, Component } from 'react'
 import './EditorTemplate.css';
+import Canvas from './Canvas';
+import {Form, Input, Button, message} from 'antd';
+import axios from 'axios';
+import {useHistory} from 'react-router-dom';
+import { API_URL } from "../config/constants";
+
 
 class EditorTemplate extends Component {
+
     state = {
         leftPercentage: 0.5
     }
@@ -25,10 +32,7 @@ class EditorTemplate extends Component {
 
 
 
-
-
     render() {
-        const { homework, board } =this.props;
         const {leftPercentage} =this.state;
         const {handleSeparatorMouseDown} =this;
 
@@ -44,19 +48,45 @@ class EditorTemplate extends Component {
             left: `${leftPercentage * 100}%`
         }
 
+        const His = (props) => {
+            const history = useHistory();
+            history.push("/");
+       }
+
+        const onSubmit =(values) => {
+            axios.post(`${API_URL}/homework`,{
+                homework: values.homework,
+            })
+            .then((result) => {
+                His.history.replace("/");
+            })
+            .catch((error)=>{
+                message.error(`에러: ${error.message}`);
+            });
+        };
+
         return (
+            <div>
             <div className="template">
             <div className='homework' style={leftStyle}>
-                {homework}
+             
+            <div>
+            <Form onFinish={onSubmit}>
+                <Form.Item name="homework">
+                 <Input.TextArea size="large" placeholder="숙제를 써주세요"className="homeworks-text" ></Input.TextArea>
+                 <Button className="homeworks-button" >숙제 업로드</Button>
+                </Form.Item>
+            </Form>
+
             </div>
-            <div className="board" style={rightStyle}>
-                {board}
             </div>
+            <Canvas className="board" style={rightStyle}></Canvas>
             <div className="separator" style={separatorStyle} onMouseDown={handleSeparatorMouseDown}>
             </div>
             </div>
-        )
-    }
+            </div>
+        );
+    };
 }
 
 export default EditorTemplate;
