@@ -1,9 +1,9 @@
-import {React, Component } from 'react'
+import {React, Component } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './EditorTemplate.css';
 import Canvas from './Canvas';
 import {Form, Input, Button, message} from 'antd';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
 import { API_URL } from "../config/constants";
 
 
@@ -35,7 +35,7 @@ class EditorTemplate extends Component {
     render() {
         const {leftPercentage} =this.state;
         const {handleSeparatorMouseDown} =this;
-
+        
         const leftStyle = {
             flex: leftPercentage
         }
@@ -48,17 +48,15 @@ class EditorTemplate extends Component {
             left: `${leftPercentage * 100}%`
         }
 
-        const His = (props) => {
-            const history = useHistory();
-            history.push("/");
-       }
 
         const onSubmit =(values) => {
             axios.post(`${API_URL}/homework`,{
                 homework: values.homework,
             })
             .then((result) => {
-                His.history.replace("/");
+                <Router>
+                    <Route path="/"></Route>
+                </Router>
             })
             .catch((error)=>{
                 message.error(`에러: ${error.message}`);
@@ -74,7 +72,9 @@ class EditorTemplate extends Component {
             <Form onFinish={onSubmit}>
                 <Form.Item name="homework">
                  <Input.TextArea size="large" placeholder="숙제를 써주세요"className="homeworks-text" ></Input.TextArea>
-                 <Button className="homeworks-button" >숙제 업로드</Button>
+                </Form.Item>
+                <Form.Item>
+                 <Button id="submit-button" htmlType="submit" className="homeworks-button" >숙제 업로드</Button>
                 </Form.Item>
             </Form>
 
