@@ -5,7 +5,7 @@ import Canvas from './Canvas';
 import {Form, Input, Button, message} from 'antd';
 import axios from 'axios';
 import { API_URL } from "../config/constants";
-
+import TeacherPage from "../teacher";
 
 class EditorTemplate extends Component {
 
@@ -55,7 +55,9 @@ class EditorTemplate extends Component {
             })
             .then((result) => {
                 <Router>
-                    <Route path="/"></Route>
+                    <Route exact={true} path="./teacher">
+                        <TeacherPage/>
+                    </Route>
                 </Router>
             })
             .catch((error)=>{
@@ -74,7 +76,7 @@ class EditorTemplate extends Component {
                  <Input.TextArea size="large" placeholder="숙제를 써주세요"className="homeworks-text" ></Input.TextArea>
                 </Form.Item>
                 <Form.Item>
-                 <Button id="submit-button" htmlType="submit" className="homeworks-button" >숙제 업로드</Button>
+                 <Button onClick={doAction} id="submit-button" htmlType="submit" className="homeworks-button" >숙제 업로드</Button>
                 </Form.Item>
             </Form>
 
