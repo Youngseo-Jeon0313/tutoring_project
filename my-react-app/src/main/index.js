@@ -1,11 +1,10 @@
 import {React} from 'react';
 import Container from '../dday';
-import {DatePicker} from 'antd';
 import Container1 from '../dday9평';
 import axios from "axios";
 import {useEffect, useState} from "react";
 import "./index.css";
-import {Link, Switch, Route} from "react-router-dom";
+import {Link, Switch, Route, useParams} from "react-router-dom";
 import { API_URL } from "../config/constants";
 import Classpage from '../daybyday/class/index';
 import Homeworkpage from '../daybyday/homework';
@@ -22,6 +21,23 @@ function MainPage() {
         });
     },[]);
 
+
+    const [homeworkcontents, sethomeworkContents] =useState([]);
+    
+    useEffect(function(){
+        axios.get(`http://localhost:8080/homework`)
+        .then(function(result){
+            sethomeworkContents(result.data.homeworkcontents);
+        })
+        .catch(function(error){
+            console.error(error);
+        })
+    },[]);
+
+    if (homeworkcontents === null){
+        return <h1>수업내용이 아직 없습니다.</h1>
+    }
+
     return (
     <div>
             <main>
@@ -34,7 +50,22 @@ function MainPage() {
                 <div className='js-clock'></div><br></br><Container/>
                 </span>
                 <span className ="본문">
-                    <div className="제목">그날그날 수업 내용!</div><br></br><DatePicker/><br></br>
+                    <div className="제목">그날그날 수업 내용<br></br>
+                    <div>
+                        {homeworkcontents.map(function(homeworkcontent, index){
+                            return(
+                                <div>
+                                    숙제: {homeworkcontent.homework}
+                                </div>
+
+                            )
+                        })}
+                        
+                        
+                        </div>
+                    <>
+                </>
+                    <br></br></div>
                     </span> 
             <Switch>
             <Route exact={true} path="../daybyday/class/index">
