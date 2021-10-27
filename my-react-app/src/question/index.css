@@ -1,4 +1,7 @@
-
+.post{
+    display: flex;
+    flex: 1;
+}
 
 .content-link {
     color: inherit;
@@ -24,6 +27,7 @@
 
 .posting {
     margin: 0 auto;
+    flex: 1;
     padding: 2rem;
     padding-top:2.5rem;
     padding-bottom: 2.5rem;

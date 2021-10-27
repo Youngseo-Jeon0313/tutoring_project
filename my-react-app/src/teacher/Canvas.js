@@ -6,14 +6,14 @@ import axios from 'axios';
 import { API_URL } from '../config/constants';
 
 function Canvas() {
-    const [imageUrl, setImageUrl] = useState(null); 
+    const [imgUrl, setImgUrl] = useState(null); 
     const history = useHistory();
 
     const onSubmit = (values) => {
         axios.post(`${API_URL}/answer`,{
-            imageUrl: imageUrl,
+            imgUrl: imgUrl,
             description: values.description,
-            httpnum: values.httpnum,
+            httpnum: parseInt(values.httpnum),
         })
         .then((result)=> {
             console.log(result);
@@ -32,8 +32,8 @@ function Canvas() {
         }
         if(info.file.status === "done") {
             const response = info.file.response;
-            const imageUrl = response.imageUrl;
-            setImageUrl(imageUrl);
+            const imgUrl = response.imgUrl;
+            setImgUrl(imgUrl);
         }
     };
 
@@ -46,14 +46,14 @@ function Canvas() {
              <Divider/>
                 <Form.Item name="anwer-upload">
                     <Upload
-                        name="image"
+                        name="img"
                         action={`${API_URL}/answerimage`} //이쪽으로
                         listType="picture"
                         showUploadList={false}
                         onChange={onChangeImage}
                         >
-                            {imageUrl ? (
-                                <img id="answer-upload-img" className="answer-upload-img" src={`${API_URL}/${imageUrl}`} alt="&nbsp;&nbsp;&nbsp;&nbsp;업로드한 사진"/>
+                            {imgUrl ? (
+                                <img id="answer-upload-img" className="answer-upload-img" src={`${API_URL}/${imgUrl}`} alt="&nbsp;&nbsp;&nbsp;&nbsp;업로드한 사진"/>
                             ):(
                                 <div>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAJ1BMVEX///8AAAC7u7tVVVWqqqpwcHB1dXV2dnb09PTHx8eHh4d/f39vb2/6z6N9AAAA/UlEQVR4nO3Xyw6CMBRFUa+CAvr/3+vEGKKFlt5XjPvMm73SQZOeTowxxhhjui1Lbv8mck/ui9yS+4mCVz9N8O4nCVb9FMFVJFXw0Q8XfPVFrsn9UEGxHyjY6IcJNvtBgp1+iGC3HyCo9N0F1b6zoKHvKmjqOwoa+26CsbXvJDjQdxEc6ouMyX1zweG+saCjbyro6hsKOvtmgu6+kUDRNxGo+gYCZV8tUPeVAoO+SmDSVwgeNv1uwXQurRYrHpp676CwGsAwBQAAAAAAAAAAAAAAAAAAAAAor/j/X80dwBhj/7Sh9uy3bwAAAACA3wTMF7PNXQDGGGOMMcZi9gQOoQ+8IpjOHQAAAABJRU5ErkJggg==" alt="ㅠㅠ사진이 안보여요"/>
