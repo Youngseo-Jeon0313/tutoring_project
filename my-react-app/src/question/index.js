@@ -35,6 +35,26 @@ function QuestionPage() {
         return <h1>질문이 아직 없습니다.</h1>
     }
 
+    if (answercontent === null){
+        return (
+            <div className="post">
+            <div className="posting">
+        <div id="image-box">
+        <img src={`${API_URL}/${content.imageUrl}`} alt="질문사진"/>
+       </div>
+       <div id="question-box">
+            <div className="pageandnum">해당 문제 : {content.pageandnum}입니당</div>
+            <div className="date">질문 날짜 : {content.date}</div>
+            <div className="description">질문 내용 : {content.description}</div>
+        </div>
+    </div>
+    <div className="posting">
+        <h1>답변이 아직 없습니다</h1>
+    </div>
+    </div>
+        )
+    }
+    
     return (
     <div className="post">
     <div className="posting">
