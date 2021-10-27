@@ -13,7 +13,7 @@ function Canvas() {
         axios.post(`${API_URL}/answer`,{
             imageUrl: imageUrl,
             description: values.description,
-            pageandnum: values.pageandnum,
+            httpnum: values.httpnum,
         })
         .then((result)=> {
             console.log(result);
@@ -38,22 +38,22 @@ function Canvas() {
     };
 
     return (
-        <div>
+        <div className="canvas">
          &nbsp;&nbsp;&nbsp;풀이를 적어주세요!<br/>
-         &nbsp;&nbsp;&nbsp;이 때 학생의 질문 내용에 들어가 문제 번호를 http 창에서 확인해주세요.
+         &nbsp;&nbsp;&nbsp;이 때 학생의 질문 내용에 들어가 문제 번호를 http 창에서 확인해주세요.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
          <Form name="answer-upload" onFinish={onSubmit} >
              <Divider/>
                 <Form.Item name="anwer-upload">
                     <Upload
                         name="image"
-                        action={`${API_URL}/answerimage`}
+                        action={`${API_URL}/answerimage`} //이쪽으로
                         listType="picture"
                         showUploadList={false}
                         onChange={onChangeImage}
                         >
                             {imageUrl ? (
-                                <img id="answer-upload-img" src={`${API_URL}/answer${imageUrl}`} alt=""/>
+                                <img id="answer-upload-img" className="answer-upload-img" src={`${API_URL}/${imageUrl}`} alt="&nbsp;&nbsp;&nbsp;&nbsp;업로드한 사진"/>
                             ):(
                                 <div>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAJ1BMVEX///8AAAC7u7tVVVWqqqpwcHB1dXV2dnb09PTHx8eHh4d/f39vb2/6z6N9AAAA/UlEQVR4nO3Xyw6CMBRFUa+CAvr/3+vEGKKFlt5XjPvMm73SQZOeTowxxhhjui1Lbv8mck/ui9yS+4mCVz9N8O4nCVb9FMFVJFXw0Q8XfPVFrsn9UEGxHyjY6IcJNvtBgp1+iGC3HyCo9N0F1b6zoKHvKmjqOwoa+26CsbXvJDjQdxEc6ouMyX1zweG+saCjbyro6hsKOvtmgu6+kUDRNxGo+gYCZV8tUPeVAoO+SmDSVwgeNv1uwXQurRYrHpp676CwGsAwBQAAAAAAAAAAAAAAAAAAAAAor/j/X80dwBhj/7Sh9uy3bwAAAACA3wTMF7PNXQDGGGOMMcZi9gQOoQ+8IpjOHQAAAABJRU5ErkJggg==" alt="ㅠㅠ사진이 안보여요"/>
@@ -64,10 +64,10 @@ function Canvas() {
                     </Form.Item>
                     <Divider/>
                 <Form.Item 
-                    label={<div className="upload-label">답변할 문제/페이지</div>}
-                    name="pageandnum"
-                    rules={[{required:true, message: '답변해줄 책/페이지/문제번호를 입력해주세요.'}]}>
-                 <Input className="upload-answer-pageandnum" size="large" placeholder="답변해줄 책/페이지/문제번호를 써주세요"></Input>
+                    label={<div className="upload-label">답변할 문제</div>}
+                    name="httpnum"
+                    rules={[{required:true, message: '답변해줄 학생 질문의 http 페이지를 읽어주세요.'}]}>
+                 <Input className="upload-answer-httpnum" size="large" placeholder="답변해줄 학생 질문의 http 페이지를 읽어주세요"></Input>
                  </Form.Item>
                  <Form.Item 
                     name="description"

@@ -4,7 +4,7 @@ import Container1 from '../dday9평';
 import axios from "axios";
 import {useEffect, useState} from "react";
 import "./index.css";
-import {Link, Switch, Route, useParams} from "react-router-dom";
+import {Link, Switch, Route} from "react-router-dom";
 import { API_URL } from "../config/constants";
 import Classpage from '../daybyday/class/index';
 import Homeworkpage from '../daybyday/homework';

@@ -1,7 +1,7 @@
 .template {
   height: calc(100vh - 20rem);
   display: flex;
-  background: gray;
+  background: rgb(148, 208, 243);
 }
 
 .homework {
@@ -18,7 +18,7 @@
 .separator {
   width: 1rem;
   height: calc(100vh - 20rem);
-  background:black;
+  background:rgb(165, 155, 253);
   position: absolute;
   transform: translate(-50%);
   cursor: col-resize;
