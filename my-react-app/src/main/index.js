@@ -55,7 +55,17 @@ function MainPage() {
                         {homeworkcontents.map(function(homeworkcontent, index){
                             return(
                                 <div>
-                                    숙제: {homeworkcontent.homework}
+                                    수업내용: {homeworkcontent.homework.split("\n").map((line)=>{
+                                        return(
+                                            <span>
+                                                {line}
+                                                <br/>
+                                            </span>
+                                        )
+                                    })
+                                    
+                                    
+                                    }
                                 </div>
 
                             )

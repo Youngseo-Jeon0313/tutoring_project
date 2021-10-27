@@ -76,7 +76,8 @@ class EditorTemplate extends Component {
             &nbsp;&nbsp;&nbsp;&nbsp;이번주에 나간 진도 그리고 다음주에 나갈 진도를 차례로 적어주세요&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Form onFinish={onSubmit}>
                 <Form.Item name="homework">
-                 <Input.TextArea size="large" placeholder="진도를 적어주세요"className="homeworks-text" ></Input.TextArea>
+                 <Input.TextArea size="large" placeholder="진도를 적어주세요"className="homeworks-text">
+                 </Input.TextArea>
                 </Form.Item>
                 <Form.Item>
                  <Button onClick={()=>alert('진도가 전송되었습니다^^.')} id="submit-button" htmlType="submit" className="homeworks-button" >진도 업로드</Button>
