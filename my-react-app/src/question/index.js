@@ -12,7 +12,7 @@ function QuestionPage() {
     const [answercontent, setAnswerContent] = useState(null);
 
     useEffect(function() {
-        axios.get(`http://localhost:8080/question/${id}`)
+        axios.get(`${API_URL}/question/${id}`)
         .then(function(result){
             setContent(result.data.content);
         })

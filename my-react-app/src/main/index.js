@@ -12,7 +12,7 @@ import Homeworkpage from '../daybyday/homework';
 function MainPage() {
     const [contents, setContent] = useState([]);
     useEffect(function(){
-        axios.get(`http://localhost:8080/question`)
+        axios.get(`${API_URL}/question`)
         .then(function(result){
             setContent(result.data.contents);
         })
@@ -25,7 +25,7 @@ function MainPage() {
     const [homeworkcontents, sethomeworkContents] =useState([]);
     
     useEffect(function(){
-        axios.get(`http://localhost:8080/homework`)
+        axios.get(`${API_URL}/homework`)
         .then(function(result){
             sethomeworkContents(result.data.homeworkcontents);
         })

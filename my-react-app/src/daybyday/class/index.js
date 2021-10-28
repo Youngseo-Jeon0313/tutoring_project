@@ -3,14 +3,14 @@ import "./index.css";
 import List from '../List.jsx';
 import useFetch from '../useFetch.js';
 import Header from './Header.jsx';
- 
+import { API_URL } from "../config/constants";
 
 const ClassPage = () => {
 
     const [todos, setTodos] = useState([]);
     const [newTodo, setNewTodo] = useState(); //이건 진짜 작성하고 있을 때 newTodo를 생성해주는 거임
     
-    const loading = useFetch(todos, 'http://localhost:8080/todos');
+    const loading = useFetch(todos, `${API_URL}/todos`);
 
     const changeInputData = (e) => {
         setNewTodo(e.target.value);
