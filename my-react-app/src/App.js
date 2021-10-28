@@ -57,10 +57,7 @@ const history = useHistory();
             </Route>
           </Switch>
         <div className="footer">
-          <footer>
-            <p>전영서 만듦!</p>
-            <p>오류나 보수 등은 20wjsdudtj@gmail.com으로 문의해주세요.</p>
-        </footer>
+
         </div>
       </div>
     );
