@@ -1,6 +1,5 @@
 import { useEffect, useState}from 'react';
 
-
 const useFetch = (callback, url) => {
     const [loading, setLoading] = useState(false);
     const fetchInitialData = async() => { //함수 ()이거 앞에 async 키워드를 추가해서 비동기 코드를 호출

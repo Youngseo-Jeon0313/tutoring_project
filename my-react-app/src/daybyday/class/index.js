@@ -3,7 +3,7 @@ import "./index.css";
 import List from '../List.jsx';
 import useFetch from '../useFetch.js';
 import Header from './Header.jsx';
-import { API_URL } from "../config/constants";
+import { API_URL } from "../../config/constants";
 
 const ClassPage = () => {
 
