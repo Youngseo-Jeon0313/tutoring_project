@@ -19,6 +19,7 @@ function QuestionPage() {
         .catch(function (error){
             console.error(error);
         });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     useEffect(function() {
@@ -29,6 +30,7 @@ function QuestionPage() {
         .catch(function (error){
             console.error(error);
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     if (content === null){
